@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/my/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 </head>
-<body>
+<body onload="hideMenu()">
 <section class="header">
   <nav>
     <a href="index.html"><img src="/my/eduford_img/logo.png" alt=""></a>
-    <div class="nav-links">
+    <div class="nav-links" id="navLinks"><i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
       <ul>
         <li><a href="">HOME</a></li>
         <li><a href="">ABOUT</a></li>
@@ -21,6 +21,7 @@
         <li><a href="">CONTACT</a></li>
       </ul>
     </div>
+    <i onclick="showMenu()" class="fa-solid fa-bars"></i>
   </nav>
   <div class="text-box">
     <h1>World's Biggest University</h1>
@@ -30,10 +31,81 @@
       <a class="hero-btn" href="">Visit Us To Know More</a>
   </div>
 </section>
+<!-- Course -->
+<section class="course">
+  <h1>Courses We Offer</h1>
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+  </p>
+<div class="row">
+  <div class="course-col">
+    <h3>Intermediate</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut natus mollitia assumenda.
+       Ratione, voluptate esse.</p>
+  </div>
+  <div class="course-col">
+    <h3>Degree</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut natus mollitia assumenda.
+       Ratione, voluptate esse.</p>
+  </div>
+  <div class="course-col">
+    <h3>Post Graduation</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut natus mollitia assumenda.
+       Ratione, voluptate esse.</p>
+  </div>
+</div>
+
+</section>
 
 
+<section class="campus">
+  <h1>Our Global Campus</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut natus mollitia assumenda.
+    Ratione, voluptate esse.</p>
+    <div class="row">
+      <div class="campus-col">
+        <img src="/my/eduford_img/london.png" alt="">
+        <div class="layer">
+          <h3>
+            LONDON
+         
+          </h3>
+        </div>
+      </div>
+      <div class="campus-col">
+        <img src="/my/eduford_img/washington.png" alt="">
+        <div class="layer bg-green">
+          <h3>
+          WASHINGTON
+         
+          </h3>
+        </div>
+      </div>
 
-      
+        <div class="campus-col ">
+        <img src="/my/eduford_img/newyork.png" alt="">
+        <div class="layer bg-blue">
+          <h3>
+            NEW YORK
+         
+          </h3>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<!--  JavaScript -->
+      <script>
+        var navLinks=document.getElementById("navLinks");
+        function showMenu(){
+          
+navLinks.style.right="0";
+        }
+        function hideMenu(){
+       
+navLinks.style.right="-200px";
+        }
+      </script>
     </body>
   </html>
   
